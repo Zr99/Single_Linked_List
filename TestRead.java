@@ -1,8 +1,5 @@
-package assignment1;
 import java.io.BufferedReader;
-
 import java.io.FileReader;
-
 
 public class TestRead {
 	public static void main(String [] args){
@@ -11,13 +8,11 @@ public class TestRead {
 	      System.err.println("No Filename");
 	      return;
 	    }
-
+		
 	    try{
 	    	  BufferedReader br = new BufferedReader(new FileReader(args[0]));
 	          String s=br.readLine();
-
-	          while(br.ready()){
-	        	  
+	          while(br.ready()){      	  
 	        	  String [] tokens = s.split("[^a-zA-Z]+");
 	        	  
 	        	  while(s!=null){
