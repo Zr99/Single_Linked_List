@@ -1,27 +1,22 @@
-package assignment1;
-
-public class SList {
-		
+public class SList {	
+	
 		SNode head;
-		
-		
+	
 		//Add into the list
-		public  void add(String x) {
-			
-			//Create a temporary SNode
-			SNode temp = new SNode(x);
-			//Add the X into the SNode
+		public  void add(String x) {		
+		//Create a temporary SNode
+		SNode temp = new SNode(x);
+		//Add the X into the SNode
 	        temp.key = new String(x);
 	        //Set the SNode to the next SNode
 	        temp.next = head;
-	        head = temp;
-	        
+	        head = temp; 
 		}
 		
 		// Check if the current value has the same value in the list  
 		public boolean has(String s) {
-			SNode curr = head;
-			
+
+			SNode curr = head;	
 			while(curr != null) {
 				//if the current value is equal return true
 				if(curr.key.equals(s)) {
@@ -48,9 +43,7 @@ public class SList {
 			}
 			return count;
 		}
-		
-		
-		
+				
 		//Remove the item in the list
 		//If the value is not exist do nothing
 		public void remove(String k) {
@@ -60,11 +53,8 @@ public class SList {
 			if(head.key == k) {
 				head = head.next;
 				return;
-			}
-			
-			SNode curr = head;
-			
-			
+			}	
+			SNode curr = head;				
 			while(curr.next != null) {
 				if(curr.next.key == k) {
 					
@@ -82,15 +72,13 @@ public class SList {
 			if(length() == 0) {
 				return true;
 			}
-			return false;
-			
+			return false;			
 		}
 		
 		//Print out the values in the list
 		 public void dump(){
 			 
-			    SNode curr = head;
-			    
+			    SNode curr = head;	    
 			    while (curr != null){
 			      System.out.println(curr.key);
 			      curr = curr.next;
@@ -116,9 +104,7 @@ public class SList {
 			
 			public SNode getNode() {
 				return next;
-			}
-
-			
+			}		
 		}
 		
 		public static void main(String[] args) {
@@ -131,9 +117,3 @@ public class SList {
 			
 			}
 	}
-	
-	
-	
-	
-
-
